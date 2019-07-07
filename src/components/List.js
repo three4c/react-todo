@@ -1,17 +1,9 @@
-import React, { Component } from 'react';
-
-let style = {
-    maxWidth: '700px'
-};
-
-let btn = {
-    cursor: 'pointer'
-};
+import React from 'react';
 
 const List = (props) => (
-    <ul className="siimple-list">
+    <ul className="form__list">
         {props.todos.map((todo, i) => {
-            return <li key={i} className="siimple-list-item siimple--bg-white" style={style}>{todo.title} <span className="siimple-tag siimple-tag--error siimple-hover" style={btn} onClick={() => props.handleRemove(i)}>Delete</span></li>
+            return <li key={i} className="form__item">{todo.title} <span className="form__del" onClick={() => props.handleRemove(i)}>Delete</span></li>
         })}
     </ul>
 )

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Form from './Form';
 import List from './List';
+import './App.css';
 
 export default class App extends Component {
   constructor(props) {
@@ -13,7 +14,6 @@ export default class App extends Component {
   }
 
   handleAdd(e) {
-    console.log(e.target.title.value);
     e.preventDefault();
     this.state.todo.push({ title: e.target.title.value });
     this.setState({ todo: this.state.todo });
@@ -27,12 +27,12 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className="siimple-box siimple--bg-dark">
-        <h1 className="siimple-box-title siimple--color-white">React Todo App</h1>
+      <section className="section">
+        <h1 className="section__title">React Todo App</h1>
         <Form handleAdd={this.handleAdd} />
         <div className="siimple-rule"></div>
         <List todos={this.state.todo} handleRemove={this.handleRemove} />
-      </div>
+      </section>
     );
   }
 }
