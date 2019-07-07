@@ -1,4 +1,5 @@
 * {
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
@@ -16,7 +17,7 @@ body {
     background: #fff;
     border-radius: 8px;
     padding: 40px;
-    width: 560px;
+    width: 640px;
     margin: 48px auto 0;
 }
 
@@ -83,7 +84,7 @@ body {
 }
 
 .form__item:not(:last-child) {
-    margin-bottom: 24px;
+    margin-bottom: 16px;
 }
 
 .form__del {
@@ -94,4 +95,47 @@ body {
     display: block;
     font-size: 14px;
     padding: 8px 16px;
+}
+
+@media (max-width: 375px) {
+    #root {
+        margin: 24px 16px;
+    }
+
+    .section {
+        width: 100%;
+        margin: 0;
+        padding: 16px;
+    }
+
+    .section__title {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+    .form__label {
+        font-size: 18px;
+    }
+
+    .form__input {
+        padding: 11px 8px;
+        margin-right: 8px;
+    }
+
+    .form__input::placeholder {
+        font-size: 14px;
+    }
+
+    .form__btn {
+        font-size: 14px;
+        padding: 11px 8px;
+    }
+
+    .form__del {
+        font-size: 12px;
+    }
+
+    .form__item {
+        padding: 12px;
+    }
 }
